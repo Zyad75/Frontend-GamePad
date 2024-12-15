@@ -1,0 +1,417 @@
+/*Géneral rules*/
+body {
+  background-color: black;
+  font-family: "kanit", sans-serif;
+}
+body p {
+  font-family: "kanit";
+  color: white;
+}
+footer {
+  display: flex;
+  justify-content: center;
+  line-height: 200px;
+}
+.footer {
+  text-align: center;
+  font-weight: bold;
+  color: white;
+  text-decoration: none;
+}
+.footer:hover {
+  cursor: pointer;
+  opacity: 0.7;
+}
+/*---------------------------------------------------------------------------------------*/
+/*---------------------------------------------------------------------------------------*/
+/*---------Header ------------------*/
+/*---------------------------------------------------------------------------------------*/
+/*---------------------------------------------------------------------------------------*/
+
+header {
+  line-height: 100px;
+  background-color: rgb(33, 28, 28);
+  border-bottom: solid 2px rgb(48, 187, 173);
+}
+.buttonLogo {
+  display: flex;
+  background-color: rgb(33, 28, 28);
+  border: none;
+  align-items: center;
+}
+.logo {
+  height: 60px;
+  margin: 20px;
+  border-radius: 50%;
+  object-fit: contain;
+}
+.logo:hover {
+  opacity: 0.8;
+  cursor: pointer;
+}
+.logoTitle {
+  color: whitesmoke;
+  font-size: 25px;
+}
+.logoTitle:hover {
+  opacity: 0.8;
+  cursor: pointer;
+}
+.headerLinks {
+  text-decoration: none;
+  color: whitesmoke;
+  padding: 10px;
+  border: 2px white solid;
+  border-radius: 3px;
+  margin-inline: 30px;
+  padding-inline: 30px;
+}
+
+.headerLinks:hover {
+  background-color: white;
+  color: black;
+}
+.logoutButton {
+  font-size: 16px;
+  font-family: "kanit";
+  text-decoration: none;
+  color: whitesmoke;
+  padding: 10px;
+  border: 2px white solid;
+  border-radius: 3px;
+  margin-inline: 30px;
+  padding-inline: 30px;
+  background-color: rgb(33, 28, 28);
+}
+.logoutButton:hover {
+  background-color: white;
+  color: black;
+  cursor: pointer;
+}
+
+.divElementsHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/*---------------------------------------------------------------------------------------*/
+/*---------------------------------------------------------------------------------------*/
+/*--------- Home page ------------------*/
+/*---------------------------------------------------------------------------------------*/
+/*---------------------------------------------------------------------------------------*/
+
+.mainSection {
+  margin-inline: 12%;
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+}
+.pageLogo {
+  height: 60px;
+  margin: 20px;
+  border-radius: 50%;
+  object-fit: contain;
+}
+.pageTitle {
+  color: whitesmoke;
+  font-size: 25px;
+}
+.logoAndTitleInHomePage {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.topPartOfHomePage {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 10px;
+}
+.searchBar {
+  height: 50px;
+  width: 90%;
+  background-color: black;
+  color: white;
+  border: none;
+  border-bottom: solid 2px rgb(48, 187, 173);
+  margin-bottom: 10px;
+}
+.titleGamesHomePage {
+  margin-top: 40px;
+  color: white;
+  font-size: 25px;
+}
+.imageGame {
+  height: 200px;
+  width: 250px;
+  object-fit: cover;
+  border-radius: 5px;
+}
+.imageGame:hover {
+  opacity: 0.8;
+}
+.imagesGames {
+  margin-top: 50px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+}
+.titleGame {
+  font-size: 16px;
+  color: whitesmoke;
+  text-align: center;
+}
+.titleGame:hover {
+  cursor: pointer;
+}
+.linkGame {
+  text-decoration: none;
+}
+.inputFilter {
+  display: flex;
+  justify-content: center;
+  gap: 5px;
+}
+.inputsFilters {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+.pagination {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin: 20px;
+}
+.paginationButtons {
+  background-color: rgb(33, 28, 28);
+  color: rgb(48, 187, 173);
+  border: 1px solid rgb(48, 187, 173);
+  padding: 5px;
+  font-family: "kanit";
+  border-radius: 5px;
+}
+.paginationButtons:hover {
+  opacity: 0.8;
+  cursor: pointer;
+}
+
+/*---------------------------------------------------------------------------------------*/
+/*---------------------------------------------------------------------------------------*/
+/*--------- Game page ------------------*/
+/*---------------------------------------------------------------------------------------*/
+/*---------------------------------------------------------------------------------------*/
+
+.imageGamePage {
+  height: 100%;
+  width: 500px;
+  object-fit: cover;
+  border-radius: 7px;
+}
+.sectionGameInfos {
+  margin: 0 auto;
+  margin: 15%;
+  height: 50%;
+}
+.gameInfosAndImg {
+  display: flex;
+  gap: 20px;
+}
+.titleAndImgGame {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 20px;
+}
+.titleGameInGamePage {
+  font-weight: 700;
+  font-size: 25px;
+}
+.divInfos {
+  margin-top: 5%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 30%;
+}
+.titleOfInfoGame {
+  margin-bottom: 10px;
+  color: gray;
+}
+.divDesc {
+  margin-top: 5%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+}
+.descGame {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  overflow: hidden;
+}
+.titleGameLike {
+  font-weight: 600;
+  font-size: 26px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+.imgSameSeriesGames {
+  height: 300px;
+  width: 400px;
+  object-fit: cover;
+}
+.nameSameSeriesGame {
+  max-width: 400px;
+  text-align: center;
+}
+.divSameGame {
+  display: flex;
+  justify-content: space-around;
+  gap: 20px;
+  border-radius: 10px;
+  margin: 0 auto;
+  overflow: scroll;
+  margin: 15%;
+  scrollbar-width: none;
+}
+.sameGameLink {
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+}
+.sameGameLink:hover {
+  opacity: 0.8;
+  cursor: pointer;
+}
+
+.sectionReviews {
+  margin-top: 50px;
+}
+.titleReviews {
+  text-align: center;
+  font-weight: 600;
+  font-size: 25px;
+}
+.divButtonFav {
+  margin-top: 5%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: flex-start;
+  width: 70%;
+}
+.buttonFav {
+  background-color: rgb(33, 28, 28);
+  color: white;
+  font-family: "kanit";
+  border: none;
+  padding: 10px;
+  border-radius: 4px;
+}
+.buttonFav:hover {
+  opacity: 0.7;
+  cursor: pointer;
+}
+
+/*---------------------------------------------------------------------------------------*/
+/*---------------------------------------------------------------------------------------*/
+/*--------- Fav page ------------------*/
+/*---------------------------------------------------------------------------------------*/
+/*---------------------------------------------------------------------------------------*/
+
+.imgFavoris {
+  height: 200px;
+  width: 250px;
+  object-fit: cover;
+  border-radius: 6px;
+}
+.divImgTitleFav {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 50px;
+  gap: 5px;
+}
+.allFavs {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin: 5%;
+}
+.deleteButton {
+  background-color: rgb(33, 28, 28);
+  color: rgb(178, 18, 18);
+  font-family: "kanit";
+  border: none;
+  padding: 10px;
+  border-radius: 4px;
+}
+.deleteButton:hover {
+  opacity: 0.7;
+  cursor: pointer;
+}
+.linkGameFav {
+  text-decoration: none;
+}
+.linkGameFav:hover {
+  opacity: 0.7;
+  cursor: pointer;
+}
+
+/*---------------------------------------------------------------------------------------*/
+/*---------------------------------------------------------------------------------------*/
+/*--------- Login/signup page ------------------*/
+/*---------------------------------------------------------------------------------------*/
+/*---------------------------------------------------------------------------------------*/
+.linkSignUp {
+  text-decoration: none;
+  color: whitesmoke;
+}
+.linkSignUp:hover {
+  opacity: 0.7;
+  cursor: pointer;
+}
+.loginTitle {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  color: white;
+  font-size: 26px;
+  font-weight: 500;
+}
+.iconLogin {
+  color: rgb(48, 187, 173);
+}
+.inputSignupLogin {
+  background-color: rgb(33, 28, 28);
+  padding: 10px;
+  border: solid 2px rgb(48, 187, 173);
+  border-radius: 5px;
+  font-family: "kanit";
+  color: rgb(48, 187, 173);
+}
+.submitButton {
+  font-family: "kanit";
+  background-color: black;
+  padding: 5px;
+  border-radius: 3px;
+  padding-inline: 10px;
+  border: solid 1px rgb(48, 187, 173);
+  color: rgb(48, 187, 173);
+}
+.submitButton:hover {
+  background-color: rgb(48, 187, 173);
+  color: black;
+  cursor: pointer;
+}
