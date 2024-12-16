@@ -11,10 +11,9 @@ const Game = ({ token }) => {
   const [imageFav, setImageFav] = useState("");
   const [titleFav, setTitleFav] = useState("");
   const [gameIdFav, setGameIdFav] = useState("");
-  const apiKey = "bd481074ca27491f9c3758ede154a2d9";
   const [errorMessage, setErrorMessage] = useState("");
   const [favButtonState, setFavButtonState] = useState(false);
-
+  const apiKey = "bd481074ca27491f9c3758ede154a2d9";
   try {
     useEffect(() => {
       const fetchData = async () => {
