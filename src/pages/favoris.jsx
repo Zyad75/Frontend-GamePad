@@ -7,6 +7,7 @@ const Favoris = ({ token }) => {
   const [data, setData] = useState({});
   const [isLoading, setIsLoading] = useState(true);
   const [titleFavToDel, setTitleFavToDel] = useState("");
+  const [toggleFav, setToggleFav] = useState(false);
   try {
     useEffect(() => {
       const fetchData = async () => {
@@ -98,6 +99,7 @@ const Favoris = ({ token }) => {
                               onClick={() => {
                                 setTitleFavToDel(elem.title);
                                 deleteFavorite();
+                                setToggleFav(!toggleFav);
                               }}
                             >
                               <FontAwesomeIcon icon="fa-solid fa-trash" />
