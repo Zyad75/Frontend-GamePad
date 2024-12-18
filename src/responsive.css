@@ -1,0 +1,95 @@
+/* responsive.css */
+
+/* --- Mobile First Default Styles --- */
+/* Les styles actuels de vos fichiers CSS seront prioritaires ici */
+
+/* --- Tablet Breakpoint --- */
+@media (min-width: 768px) and (max-width: 1024px) {
+  header {
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+  }
+
+  .divElementsHeader {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .divLinksHeader {
+    margin-top: 10px;
+  }
+
+  .divImgTitleFav {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .divSameGame {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+
+  .sectionGameInfos {
+    padding: 10px;
+    flex-direction: column;
+  }
+
+  .gameInfosAndImg {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .divButtonFav {
+    margin-top: 20px;
+  }
+}
+
+/* --- Desktop Breakpoint --- */
+@media (min-width: 1024px) {
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+  }
+
+  .divElementsHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .divLinksHeader {
+    display: flex;
+    gap: 20px;
+  }
+
+  .allFavs {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+  }
+
+  .divSameGame {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+
+  .sectionGameInfos {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 20px;
+  }
+
+  .gameInfosAndImg {
+    flex: 1;
+  }
+
+  .divButtonFav {
+    align-self: flex-start;
+  }
+}

@@ -31,9 +31,7 @@ const Login = ({ handleConnectedOrNot }) => {
           "Vous n'êtes pas autorisé a vous connecter, veuillez verifier votre email/mot de passe"
         );
       } else {
-        setErrorMessage(
-          "une erreur est survenue veuillez réessayer ulterieurement"
-        );
+        setErrorMessage("Error, password or email incorrect");
       }
     }
   };
