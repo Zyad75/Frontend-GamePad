@@ -1,12 +1,15 @@
 import { useParams } from "react-router-dom";
 import { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 import { Link } from "react-router-dom";
 import axios from "axios";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 const Game = ({ token }) => {
   const { id } = useParams();
+  const navigate = useNavigate();
   const [data, setData] = useState({});
   const [dataSameGame, setDataSameGame] = useState({});
+  const [dataReviews, setDataReviews] = useState({});
   const [isLoading, setIsLoading] = useState(true);
   const [imageFav, setImageFav] = useState("");
   const [titleFav, setTitleFav] = useState("");
@@ -31,10 +34,15 @@ const Game = ({ token }) => {
         );
         setDataSameGame(response2.data);
         setIsLoading(false);
-        console.log(response2.data);
+        // console.log(response2.data);
+        const response3 = await axios.get(
+          `https://site--backend-gamepad--cszclskmpcqr.code.run/reviews?gameId=${gameIdFav}`
+        );
+        setDataReviews(response3.data);
+        console.log(response3.data);
       };
       fetchData();
-    }, [id, data.background_image, data.name, data.id]);
+    }, [id, data.background_image, data.name, data.id, gameIdFav]);
   } catch (error) {
     console.log(error);
   }
@@ -86,21 +94,34 @@ const Game = ({ token }) => {
               >
                 {token && (
                   <div className="divButtonFav">
-                    <button
-                      className="buttonFav"
-                      onClick={() => {
-                        handleFavorite();
-                        setFavButtonState(!favButtonState);
-                      }}
-                    >
-                      Add Favorites
-                      <span style={{ marginLeft: "5px" }}>
-                        <FontAwesomeIcon
-                          style={{ color: "gold" }}
-                          icon="star"
-                        />
-                      </span>
-                    </button>
+                    <div className="divButtonsFavAndReview">
+                      <button
+                        className="buttonFav"
+                        onClick={() => {
+                          handleFavorite();
+                          setFavButtonState(!favButtonState);
+                        }}
+                      >
+                        Add Favorites
+                        <span style={{ marginLeft: "5px" }}>
+                          <FontAwesomeIcon
+                            style={{ color: "gold" }}
+                            icon="star"
+                          />
+                        </span>
+                      </button>
+                      <button
+                        className="buttonFav"
+                        onClick={() => {
+                          navigate(`/addReview/${data.id}`);
+                        }}
+                      >
+                        Add Review
+                        <span style={{ marginLeft: "5px" }}>
+                          <FontAwesomeIcon icon="fa-solid fa-file-lines" />
+                        </span>
+                      </button>
+                    </div>
                     {favButtonState && (
                       <>
                         {errorMessage ? (
@@ -197,7 +218,52 @@ const Game = ({ token }) => {
             )}
           </section>
           <section className="sectionReviews">
-            <p className="titleReviews">Reviews</p>
+            <p className="titleSectionReviews">
+              Reviews ({`${dataReviews.length}`})
+            </p>
+            {!dataReviews[0] ? (
+              <p
+                style={{
+                  textAlign: "center",
+                  color: "white",
+                  marginTop: "10px",
+                }}
+              >
+                No Reviews for this game !
+              </p>
+            ) : (
+              <>
+                <div className="divAllReviews">
+                  {dataReviews.map((elem, index) => {
+                    return (
+                      <>
+                        <div key={index} className="divReview">
+                          <div className="titleAndOwnerReview">
+                            <p className="titleReview">{elem.title}</p>
+
+                            <p className="ownerReview">
+                              <span>
+                                <FontAwesomeIcon
+                                  className="iconUser"
+                                  icon="fa-solid fa-user-secret"
+                                />
+                              </span>
+                              {elem.owner}{" "}
+                            </p>
+                          </div>
+                          <div className="divDescDate">
+                            <p className="descReview">{elem.review}</p>
+                            <p className="dateReview">
+                              {elem.date.slice(0, 10)}
+                            </p>
+                          </div>
+                        </div>
+                      </>
+                    );
+                  })}
+                </div>
+              </>
+            )}
           </section>
         </>
       )}

@@ -17,8 +17,19 @@ import {
   faStar,
   faTrash,
   faGamepad,
+  faUserSecret,
+  faFileLines,
 } from "@fortawesome/free-solid-svg-icons";
-library.add(faEnvelope, faKey, faListAlt, faStar, faTrash, faGamepad);
+library.add(
+  faEnvelope,
+  faKey,
+  faListAlt,
+  faStar,
+  faTrash,
+  faGamepad,
+  faUserSecret,
+  faFileLines
+);
 
 //------ Import des composants et des pages ---------//
 import Header from "./components/Header";
@@ -27,6 +38,7 @@ import Home from "./pages/home";
 import Favoris from "./pages/favoris";
 import Game from "./pages/game";
 import Signup from "./pages/signup";
+import AddReview from "./pages/addReview";
 //import jscookie
 import Cookies from "js-cookie";
 
@@ -40,6 +52,13 @@ function App() {
     }
     setToken(token);
   };
+
+  // gestion de la page review : on va créer un state initialement vide, qui lors de l'appui
+  // sur le bouton  add review, contiendra l'id du jeu pour lequel l'user veut poster une review,
+  //ensuite on transmet le state dans la page addreview, afin de pouvoir faire correspondre la review au jeu choisi lors de la requete post(add review)
+
+  //const [gameIdForReview, setGameIdForReview] = useState("");
+  // finalement je transmet l'id du jeu en params
   return (
     <Router>
       <Header token={token} handleConnectedOrNot={handleConnectedOrNot} />
@@ -55,6 +74,10 @@ function App() {
           element={<Signup handleConnectedOrNot={handleConnectedOrNot} />}
         ></Route>
         <Route path="/favoris" element={<Favoris token={token} />}></Route>
+        <Route
+          path="/addReview/:gameID"
+          element={<AddReview token={token} />}
+        ></Route>
       </Routes>
       <footer>
         <p>
