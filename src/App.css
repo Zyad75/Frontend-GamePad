@@ -167,6 +167,7 @@ header {
 }
 .titleGame {
   font-size: 16px;
+  width: 250px;
   color: whitesmoke;
   text-align: center;
 }

@@ -95,7 +95,8 @@ const Home = () => {
                     }}
                   >
                     <button
-                      style={{ color: "black", width: "135px" }}
+                      style={{ width: "135px" }}
+                      className="paginationButtons"
                       onClick={() => {
                         setGenres("");
                       }}
@@ -106,6 +107,7 @@ const Home = () => {
                       style={{
                         display: "flex",
                         gap: "10px",
+                        alignItems: "center",
                       }}
                     >
                       <p style={{ color: "white", marginRight: "20px" }}>
@@ -113,6 +115,7 @@ const Home = () => {
                       </p>
                       <select
                         style={{ marginRight: "90%" }}
+                        className="paginationButtons"
                         onChange={(elem) => {
                           setGenres("genres=" + elem.target.value);
                         }}
@@ -151,7 +154,8 @@ const Home = () => {
                     }}
                   >
                     <button
-                      style={{ color: "black", width: "135px" }}
+                      style={{ width: "135px" }}
+                      className="paginationButtons"
                       onClick={() => {
                         setPlatform("");
                       }}
@@ -162,11 +166,13 @@ const Home = () => {
                       style={{
                         display: "flex",
                         gap: "10px",
+                        alignItems: "center",
                       }}
                     >
                       <p style={{ color: "white" }}>Platforms:</p>
                       <select
                         style={{ marginRight: "90%" }}
+                        className="paginationButtons"
                         onChange={(elem) => {
                           setPlatform("platforms=" + elem.target.value);
                         }}
@@ -218,6 +224,7 @@ const Home = () => {
                   >
                     <p style={{ color: "white" }}>Sort by :</p>
                     <select
+                      className="paginationButtons"
                       onChange={(elem) => {
                         setSort(elem.target.value);
                       }}
