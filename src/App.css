@@ -572,9 +572,6 @@ header {
     margin-top: 20px;
   }
 }
-@media (min-width: 1024px) {
-  /*---- Home page responsive*/
-}
 
 /* --- Tablet Breakpoint --- */
 @media (min-width: 768px) and (max-width: 1248px) {
@@ -681,6 +678,14 @@ header {
     flex-direction: column;
     gap: 30px;
     margin-top: 10px;
+  }
+  .imageGame {
+    height: 70px;
+    width: 80px;
+  }
+  .titleGame {
+    width: 80px;
+    font-size: 10px;
   }
   .pagination {
     max-width: 360px;
