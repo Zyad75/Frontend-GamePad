@@ -36,7 +36,7 @@ const AddReview = ({ token }) => {
   };
 
   return (
-    <>
+    <div className="divAddReviewPage">
       <form
         onSubmit={(event) => {
           event.preventDefault();
@@ -76,7 +76,7 @@ const AddReview = ({ token }) => {
           </>
         )}
       </form>
-    </>
+    </div>
   );
 };
 export default AddReview;

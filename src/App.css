@@ -329,7 +329,11 @@ header {
   display: flex;
   gap: 20px;
 }
-
+.divInfosGameAndButtons {
+  display: flex;
+  flex-direction: column;
+  margin-top: 5%;
+}
 .sectionReviews {
   margin-top: 50px;
   display: flex;
@@ -573,7 +577,7 @@ header {
 }
 
 /* --- Tablet Breakpoint --- */
-@media (min-width: 768px) and (max-width: 1024px) {
+@media (min-width: 768px) and (max-width: 1248px) {
   /*---- Header Responsive -----*/
   .divElementsHeader {
     align-items: center;
@@ -592,6 +596,36 @@ header {
 
   .logoTitle {
     font-size: 22px;
+  }
+  /*----- Game Page Responsive -----*/
+  .gameInfosAndImg {
+    max-width: 90%;
+    flex-direction: column;
+    align-items: center;
+    margin: 10%;
+  }
+  .imageGamePage {
+    width: 450px;
+    height: 450px;
+  }
+  .divInfosGameAndButtons {
+    overflow: scroll;
+  }
+  .imgSameSeriesGames {
+    height: 250px;
+    width: 250px;
+  }
+  .divSameGame {
+    margin: 5%;
+    margin-top: 20px;
+  }
+  .divAllReviews {
+    width: 75%;
+  }
+  .descReview {
+    width: 350px;
+    height: 100px;
+    overflow: scroll;
   }
 }
 /*----- Home Page Responsive -----*/
@@ -651,5 +685,50 @@ header {
   .pagination {
     max-width: 360px;
     overflow: scroll;
+  }
+  /*----- Game Page Responsive -----*/
+  .gameInfosAndImg {
+    max-width: 90%;
+    flex-direction: column;
+    align-items: center;
+    margin: 10%;
+  }
+  .imageGamePage {
+    width: 250px;
+    height: 250px;
+  }
+  .divInfosGameAndButtons {
+    height: 200px;
+    overflow: scroll;
+  }
+  .imgSameSeriesGames {
+    height: 250px;
+    width: 250px;
+  }
+  .titleGameLike {
+    font-size: 18px;
+  }
+  .divSameGame {
+    margin: 5%;
+    margin-top: 20px;
+  }
+  .divAllReviews {
+    width: 90%;
+  }
+  .descReview {
+    width: 200px;
+    height: 100px;
+    overflow: scroll;
+  }
+  /*----- AddReview Page Responsive -----*/
+  .formAddReview {
+    width: 300px;
+    height: 500px;
+  }
+  .divAddReviewPage {
+    margin-right: 30%;
+  }
+  .submitReview {
+    width: 100px;
   }
 }

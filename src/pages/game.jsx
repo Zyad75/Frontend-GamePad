@@ -85,13 +85,7 @@ const Game = ({ token }) => {
                   className="imageGamePage"
                 />
               </div>
-              <div
-                style={{
-                  display: "flex",
-                  flexDirection: "column",
-                  marginTop: "5%",
-                }}
-              >
+              <div className="divInfosGameAndButtons">
                 {token && (
                   <div className="divButtonFav">
                     <div className="divButtonsFavAndReview">
