@@ -169,7 +169,7 @@ const Home = () => {
                         alignItems: "center",
                       }}
                     >
-                      <p style={{ color: "white" }}>Platforms:</p>
+                      <p style={{ color: "white" }}>Platform:</p>
                       <select
                         style={{ marginRight: "90%" }}
                         className="paginationButtons"
@@ -219,9 +219,7 @@ const Home = () => {
                       </select>
                     </div>
                   </div>
-                  <div
-                    style={{ display: "flex", gap: "10px", marginLeft: "60%" }}
-                  >
+                  <div className="divSort">
                     <p style={{ color: "white" }}>Sort by :</p>
                     <select
                       className="paginationButtons"

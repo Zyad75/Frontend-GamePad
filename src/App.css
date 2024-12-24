@@ -188,8 +188,15 @@ header {
   align-items: center;
   gap: 20px;
 }
+.divSort {
+  display: flex;
+  gap: 10px;
+  margin-left: 10%;
+  align-items: center;
+}
 .pagination {
   display: flex;
+
   align-items: center;
   justify-content: center;
   gap: 10px;
@@ -550,18 +557,24 @@ header {
 
 /*-------- Media Queries (responsive) --------*/
 
-/*---- Header Responsive -----*/
-
 /*----*/
 @media (min-width: 768px) {
+  /*---- Header Responsive -----*/
   .logoutLogo,
   .headerLinkLogos {
     display: none;
   }
+  .inputsFilters {
+    margin-top: 20px;
+  }
+}
+@media (min-width: 1024px) {
+  /*---- Home page responsive*/
 }
 
 /* --- Tablet Breakpoint --- */
 @media (min-width: 768px) and (max-width: 1024px) {
+  /*---- Header Responsive -----*/
   .divElementsHeader {
     align-items: center;
   }
@@ -581,9 +594,11 @@ header {
     font-size: 22px;
   }
 }
+/*----- Home Page Responsive -----*/
 
 /* --- Mobile Breakpoint --- */
 @media (max-width: 767px) {
+  /*---- Header Responsive -----*/
   .divElementsHeader {
     align-items: center;
     gap: 10px;
@@ -626,5 +641,15 @@ header {
 
   .logoTitle {
     font-size: 18px;
+  }
+  /*----- Home Page Responsive -----*/
+  .inputsFilters {
+    flex-direction: column;
+    gap: 30px;
+    margin-top: 10px;
+  }
+  .pagination {
+    max-width: 360px;
+    overflow: scroll;
   }
 }
