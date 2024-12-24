@@ -65,7 +65,7 @@ const Favoris = ({ token }) => {
             }}
           >
             {" "}
-            Favorite Page
+            Favorites Page
           </p>
           {isLoading ? (
             <p>Chargement...</p>
