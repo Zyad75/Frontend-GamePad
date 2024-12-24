@@ -19,6 +19,9 @@ import {
   faGamepad,
   faUserSecret,
   faFileLines,
+  faBookmark,
+  faRightFromBracket,
+  faUser,
 } from "@fortawesome/free-solid-svg-icons";
 library.add(
   faEnvelope,
@@ -28,7 +31,10 @@ library.add(
   faTrash,
   faGamepad,
   faUserSecret,
-  faFileLines
+  faFileLines,
+  faBookmark,
+  faRightFromBracket,
+  faUser
 );
 
 //------ Import des composants et des pages ---------//

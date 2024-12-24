@@ -30,8 +30,8 @@ const Signup = ({ handleConnectedOrNot }) => {
       console.log(error);
       if (error.response.status === 409) {
         setErrorMessage("adresse déja utilisée");
-      } else if (error.response.data.message === "Missing parameters") {
-        setErrorMessage("Veuillez renseigner toutes vos informations");
+      } else if (error.response.data.error === "Missing parameters") {
+        setErrorMessage("Error, please fill in all fields");
       } else {
         setErrorMessage("Erreur, veuillez réessayer svp !");
       }
